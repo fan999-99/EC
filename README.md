@@ -22,13 +22,11 @@ HOST=0.0.0.0 npm start
 
 ## 线上站点
 
-公开地址：https://fan999-99.github.io/EC/
+计划中的地址是 https://fan999-99.github.io/EC/ 。图片和房间接口都相对当前页面解析，因此放在域名根目录，或放在 GitHub 项目页的 `/EC/` 下，都能找到 `assets/`。
 
-图片和房间接口都相对当前页面解析，因此放在域名根目录，或放在 GitHub 项目页的 `/EC/` 下，都能找到 `assets/`。
+`npm run build` 生成 `site/`（`index.html` 与 `assets/`）。静态文件已经在 `gh-pages` 分支的根目录。合并到 `main` 之后，Actions 会重新构建并更新该分支。要让上面的地址打开游戏，请到仓库 Settings → Pages，选择分支 `gh-pages`、目录 `/ (root)`。当前这个仓库的自动化令牌没有 Pages 管理权限，所以还不能代为打开，未打开时该地址会是 404。
 
 线上可以直接玩本机对战和人机。联机房间需要与网页同一来源的 `/api/rooms`，以及一块持久数据库（原设计是 Cloudflare D1）。这次没有可用的数据库凭证，所以公开页面不提供联机，也不会把请求转到其他网站。打开「房间联机」时会直接说明。`npm start` 会在本机用 SQLite 提供这个接口。
-
-`npm run build` 生成 `site/`（`index.html` 与 `assets/`）。GitHub Pages 使用 `gh-pages` 分支的根目录。合并到 `main` 之后，Actions 会重新构建并更新该分支。请在仓库 Settings → Pages 里选择分支 `gh-pages`、目录 `/ (root)`。
 
 ## 离线单文件
 
