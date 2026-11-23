@@ -1,0 +1,14 @@
+{
+  "name": "yuansu-jue",
+  "version": "8.0.0",
+  "private": true,
+  "type": "module",
+  "description": "元素诀 · 七灯决战网页版",
+  "scripts": {
+    "start": "node local-server.mjs",
+    "build": "node scripts/build-static.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
