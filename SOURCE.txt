@@ -1,0 +1,5 @@
+来源：元素诀-Windows应用-v8（2026-10-22，Electron 便携版）中的 resources/app/game。
+未包含 Electron 运行时、DLL、语言包、Chromium，以及仅作原图备份的 PNG。网页只使用 webp。
+未包含 public/offline.html（约 24.8MB 的单文件离线包）。网页上的下载入口已改为说明，不再链接这个文件。
+本地服务：npm start 或 node local-server.mjs，默认 http://127.0.0.1:4173。/ 映射到 client/game.html，静态资源在 public/，/api/rooms 使用本机 sqlite。
+托管房间仍按 Cloudflare D1 的 prepare/bind/first/run 形状编写。没有持久数据库时，只发布静态页面，不代理到其他来源。
